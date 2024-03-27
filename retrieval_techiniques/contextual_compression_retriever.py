@@ -3,7 +3,7 @@ from langchain.vectorstores import Chroma
 from langchain.llms import OpenAI
 from langchain.retrievers import ContextualCompressionRetriever
 from langchain.retrievers.document_compressors import LLMChainExtractor
-from decople import config
+from decouple import config
 
 TEXT = ["Python is a versatile and widely used programming language known for its clean and readable syntax, which relies on indentation for code structure",
         "It is a general-purpose language suitable for web development, data analysis, AI, machine learning, and automation. Python offers an extensive standard library with modules covering a broad range of tasks, making it efficient for developers.",
@@ -28,6 +28,7 @@ vector_db = Chroma.from_texts(
 )
 
 llm = OpenAI(
+    model="gpt-3.5-turbo-instruct",
     temperature=0,
     openai_api_key=config("OPENAI_API_KEY"))
 
