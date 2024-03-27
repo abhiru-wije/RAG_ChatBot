@@ -1,6 +1,8 @@
 from rag_functionality import rag_function
 import streamlit as st
 
+st.title("AI Chat Assistant")
+st.subheader("Chat with an AI to get your questions answered.")
 
 # set initial message
 if "messages" not in st.session_state.keys():
