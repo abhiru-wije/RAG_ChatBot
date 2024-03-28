@@ -2,7 +2,7 @@ from langchain.document_loaders import PyPDFLoader
 from langchain.embeddings.sentence_transformer import SentenceTransformerEmbeddings
 from langchain.vectorstores import Chroma
 
-FILE_PATH = "../documents/AI and Data Science.pdf"
+FILE_PATH = "../documents/Zappy-AI.pdf"
 
 # Create loader
 loader = PyPDFLoader(FILE_PATH)
