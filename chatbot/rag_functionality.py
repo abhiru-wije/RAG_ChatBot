@@ -29,7 +29,7 @@ qa_chain = ConversationalRetrievalChain.from_llm(
     llm=llm,
     memory=memory,
     retriever=vector_db.as_retriever(
-        search_kwargs={"fetch": 4, "k": 3}, search_type="mmr"),
+        search_kwargs={"fetch": 4, "k": 20}, search_type="mmr"),
     chain_type="refine"
 )
 
